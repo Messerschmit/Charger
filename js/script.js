@@ -17,8 +17,8 @@ CountdownTimer.prototype = {
 
         if ((this.tl - today) > 0) {
             //timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">DAYS</div><span class="number day">'+day+'</span></span>';
-            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">HOURS</div><span class="number hour">' + hour + '</span></span>:';
-            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">MINS</div><span class="number min">' + this.addZero(min) + '</span></span>:<span class="number-wrapper"><div class="line"></div><div class="caption">SECS</div><span class="number sec">' + this.addZero(sec) + '</span></span>';
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">ЧАСЫ</div><span class="number hour">' + hour + '</span></span>:';
+            timer += '<span class="number-wrapper"><div class="line"></div><div class="caption">МИНУТЫ</div><span class="number min">' + this.addZero(min) + '</span></span>:<span class="number-wrapper"><div class="line"></div><div class="caption">СЕКУНДЫ</div><span class="number sec">' + this.addZero(sec) + '</span></span>';
             this.elem.innerHTML = timer;
             tid = setTimeout(function () {
                 me.countDown();
@@ -77,10 +77,10 @@ $(document).ready(function () {
 
     $('.sl-up').hide;
     $('.sl-up').css({"visibility": "hidden"});
-        
+
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        
+
         $('.sl-up').each(function () {
             var imagePos = $(this).offset().top;
 
